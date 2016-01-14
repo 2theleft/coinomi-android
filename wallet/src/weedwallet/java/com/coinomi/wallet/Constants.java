@@ -29,6 +29,7 @@ import com.coinomi.core.coins.NuBitsMain;
 import com.coinomi.core.coins.NuSharesMain;
 import com.coinomi.core.coins.ParkbyteMain;
 import com.coinomi.core.coins.PeercoinMain;
+import com.coinomi.core.coins.PotcoinMain;
 import com.coinomi.core.coins.ReddcoinMain;
 import com.coinomi.core.coins.RubycoinMain;
 import com.coinomi.core.coins.ShadowCashMain;
@@ -103,9 +104,9 @@ public class Constants {
     public static final char CURRENCY_MINUS_SIGN = '-';
 
     public static final String MARKET_APP_URL = "market://details?id=%s";
-    public static final String BINARY_URL = "https://github.com/Coinomi/coinomi-android/releases";
+    public static final String BINARY_URL = "https://passajoint.com/weedwallet";
 
-    public static final String VERSION_URL = "http://coinomi.com/version";
+    public static final String VERSION_URL = "https://s3.amazonaws.com/weedwallet/version";
 
     // TODO move to resource files
     public static final List<CoinAddress> DEFAULT_COINS_SERVERS = ImmutableList.of(
@@ -171,7 +172,9 @@ public class Constants {
             new CoinAddress(DogecoindarkMain.get(), new ServerAddress("doged-cce-1.coinomi.net", 5036),
                                                     new ServerAddress("doged-cce-2.coinomi.net", 5036)),
             new CoinAddress(GcrMain.get(),          new ServerAddress("gcr-cce-1.coinomi.net", 5038),
-                                                    new ServerAddress("gcr-cce-2.coinomi.net", 5038))
+                                                    new ServerAddress("gcr-cce-2.coinomi.net", 5038)),
+            new CoinAddress(PotcoinMain.get(),      new ServerAddress("elect1.potcoin.com", 50001),
+                                                    new ServerAddress("elect2.potcoin.com", 50001))
     );
 
     public static final HashMap<CoinType, Integer> COINS_ICONS;
@@ -209,6 +212,7 @@ public class Constants {
         COINS_ICONS.put(CoinID.DOGECOINDARK_MAIN.getCoinType(), R.drawable.dogecoindark);
         COINS_ICONS.put(CoinID.CLAMS_MAIN.getCoinType(), R.drawable.clams);
         COINS_ICONS.put(CoinID.GCR_MAIN.getCoinType(), R.drawable.gcr);
+        COINS_ICONS.put(CoinID.POTCOIN_MAIN.getCoinType(), R.drawable.potcoin);
 
         COINS_BLOCK_EXPLORERS = new HashMap<CoinType, String>();
         COINS_BLOCK_EXPLORERS.put(CoinID.BITCOIN_MAIN.getCoinType(), "https://blockchain.info/tx/%s");
@@ -243,6 +247,7 @@ public class Constants {
         COINS_BLOCK_EXPLORERS.put(CoinID.DOGECOINDARK_MAIN.getCoinType(), "http://darkchain.link/tx/%s");
         COINS_BLOCK_EXPLORERS.put(CoinID.CLAMS_MAIN.getCoinType(), "http://khashier.com/tx/%s");
         COINS_BLOCK_EXPLORERS.put(CoinID.GCR_MAIN.getCoinType(), "https://chainz.cryptoid.info/gcr/tx.dws?%s");
+        COINS_BLOCK_EXPLORERS.put(CoinID.POTCOIN_MAIN.getCoinType(), "https://chainz.cryptoid.info/pot/tx.dws?%s");
     }
 
     public static final CoinType DEFAULT_COIN = BitcoinMain.get();
@@ -255,34 +260,35 @@ public class Constants {
 
     public static final List<CoinType> SUPPORTED_COINS = ImmutableList.of(
             BitcoinMain.get(),
-            DogecoinMain.get(),
+//            DogecoinMain.get(),
             LitecoinMain.get(),
-            DashMain.get(),
-            NuBitsMain.get(),
-            PeercoinMain.get(),
-            NamecoinMain.get(),
-            BlackcoinMain.get(),
-            ClamsMain.get(),
-            MonacoinMain.get(),
-            NuSharesMain.get(),
-            NovacoinMain.get(),
-            GcrMain.get(),
-            VpncoinMain.get(),
-            VertcoinMain.get(),
-            ShadowCashMain.get(),
-            FeathercoinMain.get(),
-            ReddcoinMain.get(),
-            DigibyteMain.get(),
-            RubycoinMain.get(),
-            DigitalcoinMain.get(),
-            DogecoindarkMain.get(),
-            JumbucksMain.get(),
-            CanadaeCoinMain.get(),
+//            DashMain.get(),
+//            NuBitsMain.get(),
+//            PeercoinMain.get(),
+//            NamecoinMain.get(),
+//            BlackcoinMain.get(),
+//            ClamsMain.get(),
+//            MonacoinMain.get(),
+//            NuSharesMain.get(),
+//            NovacoinMain.get(),
+//            GcrMain.get(),
+//            VpncoinMain.get(),
+//            VertcoinMain.get(),
+//            ShadowCashMain.get(),
+//            FeathercoinMain.get(),
+//            ReddcoinMain.get(),
+//            DigibyteMain.get(),
+//            RubycoinMain.get(),
+//            DigitalcoinMain.get(),
+//            DogecoindarkMain.get(),
+//            JumbucksMain.get(),
+//            CanadaeCoinMain.get(),
             CannacoinMain.get(),
-            NeoscoinMain.get(),
-            ParkbyteMain.get(),
-            BitcoinTest.get(),
-            LitecoinTest.get(),
-            DogecoinTest.get()
+//            NeoscoinMain.get(),
+//            ParkbyteMain.get(),
+//            BitcoinTest.get(),
+//            LitecoinTest.get(),
+//            DogecoinTest.get(),
+            PotcoinMain.get()
     );
 }
