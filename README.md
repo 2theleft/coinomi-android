@@ -3,6 +3,9 @@ WeedWallet | A Coinomi Clone
 
 Download & more information on Weed Wallet @ https://passajoint.com/weedwallet - available on Google Play!
 
+Conimi Wallet Info
+==================
+
 Our goal is to support every cryptocurrency with an active development team. Store all the best cryptocurrency through a single app, without sacrificing security. Private keys are stored on your own device. Instead of having one backup file for every coin, you get a master key that can be memorized or stored on a piece of paper. Restore all wallets from a single recovery phrase.
 
 TODOs:
@@ -80,6 +83,20 @@ For now test it manually by installing it `adb install -r wallet/wallet-release.
 
 
 ## Version history
+
+New in version 1.6.0-1.6.2
+- Overview screen
+- Optimized memory usage
+- Sweep paper wallets
+- “Pull to refresh” functionality
+- Synchronized progress bar
+- Option to rename accounts
+- Option to modify fees in the Settings area
+- Transactions now include Date stamps
+- Improved handling of addresses of coins with conflicting address versions
+- Support for landscape view
+- User interface and usability tweaks
+- New coins: Auroracoin, Gulden, Potcoin, Bata, Verge, Asiacoin, e-Gulden, OKCash, Clubcoin, Richcoin
 
 New in version 1.5.22
 - Improved UI for setting a BIP39 passphrase
